@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #theme-list {
+            width: 20%;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        #theme-list button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        #theme-list button:hover {
+            background-color: #d0d0d0;
+        }
+
+        #content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+
+        #content p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="theme-list"></div>
+    <div id="content">
+        <p id="line1">Line 1</p>
+        <p id="line2">Line 2</p>
+        <p id="line3">Line 3</p>
+    </div>
+
+    <script>
+        async function loadThemes() {
+            const response = await fetch('themes.json');
+            const themes = await response.json();
+            const themeList = document.getElementById('theme-list');
+
+            for (const themeName in themes) {
+                const button = document.createElement('button');
+                button.textContent = themeName;
+                button.onclick = () => applyTheme(themeName, themes[themeName]);
+                themeList.appendChild(button);
+            }
+        }
+
+        function applyTheme(themeName, theme) {
+            const content = document.getElementById('content');
+            const themeList = document.getElementById('theme-list');
+
+            content.style.backgroundColor = theme.background;
+            themeList.style.backgroundColor = theme.themePanel;
+
+            document.querySelectorAll('#theme-list button').forEach(button => {
+                button.style.backgroundColor = theme.button;
+            });
+
+            document.getElementById('line1').style.color = theme.line1;
+            document.getElementById('line2').style.color = theme.line2;
+            document.getElementById('line3').style.color = theme.line3;
+        }
+
+        loadThemes();
+    </script>
+</body>
+</html>

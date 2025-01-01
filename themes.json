@@ -1,0 +1,26 @@
+{
+    "theme1": {
+        "background": "#FFD700",
+        "line1": "#FF4500",
+        "line2": "#1E90FF",
+        "line3": "#32CD32",
+        "themePanel": "#FFFAF0",
+        "button": "#FFA07A"
+    },
+    "theme2": {
+        "background": "#8A2BE2",
+        "line1": "#FF69B4",
+        "line2": "#20B2AA",
+        "line3": "#FFFFE0",
+        "themePanel": "#E6E6FA",
+        "button": "#DDA0DD"
+    },
+    "theme3": {
+        "background": "#2F4F4F",
+        "line1": "#00CED1",
+        "line2": "#FF6347",
+        "line3": "#FFD700",
+        "themePanel": "#708090",
+        "button": "#778899"
+    }
+}
