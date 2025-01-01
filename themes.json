@@ -1,26 +1,94 @@
 {
     "theme1": {
-        "background": "#FFD700",
-        "line1": "#FF4500",
-        "line2": "#1E90FF",
-        "line3": "#32CD32",
-        "themePanel": "#FFFAF0",
-        "button": "#FFA07A"
+        "background": "#282c34",
+        "themePanel": "#3a3f4b",
+        "button": "#4b5260",
+        "textColors": {
+            "black": "#1c1f26",
+            "dark-gray": "#3a3f4b",
+            "red": "#e06c75",
+            "light-red": "#e8838e",
+            "green": "#98c379",
+            "light-green": "#b4d684",
+            "yellow": "#e5c07b",
+            "light-yellow": "#f0d99a",
+            "blue": "#61afef",
+            "light-blue": "#78bff5",
+            "magenta": "#c678dd",
+            "light-magenta": "#d890e5",
+            "cyan": "#56b6c2",
+            "light-cyan": "#6fc7d5",
+            "light-gray": "#abb2bf",
+            "white": "#ffffff"
+        }
     },
     "theme2": {
-        "background": "#8A2BE2",
-        "line1": "#FF69B4",
-        "line2": "#20B2AA",
-        "line3": "#FFFFE0",
-        "themePanel": "#E6E6FA",
-        "button": "#DDA0DD"
+        "background": "#1d2021",
+        "themePanel": "#282828",
+        "button": "#504945",
+        "textColors": {
+            "black": "#282828",
+            "dark-gray": "#928374",
+            "red": "#cc241d",
+            "light-red": "#fb4934",
+            "green": "#98971a",
+            "light-green": "#b8bb26",
+            "yellow": "#d79921",
+            "light-yellow": "#fabd2f",
+            "blue": "#458588",
+            "light-blue": "#83a598",
+            "magenta": "#b16286",
+            "light-magenta": "#d3869b",
+            "cyan": "#689d6a",
+            "light-cyan": "#8ec07c",
+            "light-gray": "#a89984",
+            "white": "#ebdbb2"
+        }
     },
     "theme3": {
-        "background": "#2F4F4F",
-        "line1": "#00CED1",
-        "line2": "#FF6347",
-        "line3": "#FFD700",
-        "themePanel": "#708090",
-        "button": "#778899"
+        "background": "#002b36",
+        "themePanel": "#073642",
+        "button": "#586e75",
+        "textColors": {
+            "black": "#073642",
+            "dark-gray": "#586e75",
+            "red": "#dc322f",
+            "light-red": "#cb4b16",
+            "green": "#859900",
+            "light-green": "#b58900",
+            "yellow": "#b58900",
+            "light-yellow": "#e1b500",
+            "blue": "#268bd2",
+            "light-blue": "#2aa198",
+            "magenta": "#d33682",
+            "light-magenta": "#6c71c4",
+            "cyan": "#2aa198",
+            "light-cyan": "#93a1a1",
+            "light-gray": "#839496",
+            "white": "#fdf6e3"
+        }
+    },
+    "theme4": {
+        "background": "#0c0f13",
+        "themePanel": "#1a1e24",
+        "button": "#232831",
+        "textColors": {
+            "black": "#0c0f13",
+            "dark-gray": "#1a1e24",
+            "red": "#d32f2f",
+            "light-red": "#ff6659",
+            "green": "#388e3c",
+            "light-green": "#66bb6a",
+            "yellow": "#fbc02d",
+            "light-yellow": "#ffee58",
+            "blue": "#1976d2",
+            "light-blue": "#42a5f5",
+            "magenta": "#8e24aa",
+            "light-magenta": "#ab47bc",
+            "cyan": "#00acc1",
+            "light-cyan": "#26c6da",
+            "light-gray": "#c1c1c1",
+            "white": "#ffffff"
+        }
     }
 }
