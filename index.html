@@ -53,14 +53,33 @@
             font-weight: bold;
             transition: color 0.3s;
         }
+
+        .text-sample {
+            margin: 2px 0;
+        }
     </style>
 </head>
 <body>
     <div id="theme-list"></div>
     <div id="content">
-        <p id="line1">Line 1</p>
-        <p id="line2">Line 2</p>
-        <p id="line3">Line 3</p>
+        <div id="text-samples">
+            <p class="text-sample" id="black">Black</p>
+            <p class="text-sample" id="dark-gray">Dark Gray</p>
+            <p class="text-sample" id="red">Red</p>
+            <p class="text-sample" id="light-red">Light Red</p>
+            <p class="text-sample" id="green">Green</p>
+            <p class="text-sample" id="light-green">Light Green</p>
+            <p class="text-sample" id="yellow">Yellow</p>
+            <p class="text-sample" id="light-yellow">Light Yellow</p>
+            <p class="text-sample" id="blue">Blue</p>
+            <p class="text-sample" id="light-blue">Light Blue</p>
+            <p class="text-sample" id="magenta">Magenta</p>
+            <p class="text-sample" id="light-magenta">Light Magenta</p>
+            <p class="text-sample" id="cyan">Cyan</p>
+            <p class="text-sample" id="light-cyan">Light Cyan</p>
+            <p class="text-sample" id="light-gray">Light Gray</p>
+            <p class="text-sample" id="white">White</p>
+        </div>
     </div>
 
     <script>
@@ -88,9 +107,12 @@
                 button.style.backgroundColor = theme.button;
             });
 
-            document.getElementById('line1').style.color = theme.line1;
-            document.getElementById('line2').style.color = theme.line2;
-            document.getElementById('line3').style.color = theme.line3;
+            for (const textId in theme.textColors) {
+                const textElement = document.getElementById(textId);
+                if (textElement) {
+                    textElement.style.color = theme.textColors[textId];
+                }
+            }
         }
 
         loadThemes();
