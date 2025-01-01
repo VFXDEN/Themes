@@ -1,5 +1,6 @@
 {
     "theme1": {
+        "downloadLink": "https://example.com/",
         "background": "#282c34",
         "themePanel": "#3a3f4b",
         "button": "#4b5260",
@@ -23,6 +24,7 @@
         }
     },
     "theme2": {
+        "downloadLink": "https://example.com/",
         "background": "#1d2021",
         "themePanel": "#282828",
         "button": "#504945",
@@ -46,6 +48,7 @@
         }
     },
     "theme3": {
+        "downloadLink": "https://example.com/",
         "background": "#002b36",
         "themePanel": "#073642",
         "button": "#586e75",
@@ -69,6 +72,7 @@
         }
     },
     "theme4": {
+        "downloadLink": "https://example.com/",
         "background": "#0c0f13",
         "themePanel": "#1a1e24",
         "button": "#232831",
