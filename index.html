@@ -30,6 +30,7 @@
             background-color: #e0e0e0;
             cursor: pointer;
             text-align: left;
+            transition: all 0.3s ease;
         }
 
         #theme-list button:hover {
@@ -57,6 +58,23 @@
         .text-sample {
             margin: 2px 0;
         }
+
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -80,6 +98,7 @@
             <p class="text-sample" id="light-gray">Light Gray</p>
             <p class="text-sample" id="white">White</p>
         </div>
+        <button id="download-button" class="download-button" style="display: none;">Download Theme</button>
     </div>
 
     <script>
@@ -99,6 +118,7 @@
         function applyTheme(themeName, theme) {
             const content = document.getElementById('content');
             const themeList = document.getElementById('theme-list');
+            const downloadButton = document.getElementById('download-button');
 
             content.style.backgroundColor = theme.background;
             themeList.style.backgroundColor = theme.themePanel;
@@ -113,6 +133,13 @@
                     textElement.style.color = theme.textColors[textId];
                 }
             }
+
+            // Set up download button
+            downloadButton.style.display = 'block';
+            downloadButton.textContent = `Download ${themeName} Theme`;
+            downloadButton.onclick = () => {
+                window.location.href = theme.downloadLink;
+            };
         }
 
         loadThemes();
